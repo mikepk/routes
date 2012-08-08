@@ -12,3 +12,7 @@ html_coverage
 .hgignore
 .idea
 *.iml
+#*#
+._*
+*.pid
+*.log
