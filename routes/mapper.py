@@ -287,8 +287,8 @@ class SubMapper(SubMapperParent):
         """Generates the "delete" action for a collection member submapper."""
         return self.action(action='delete', method='DELETE', **kwargs)
 
-    def add_actions(self, actions):
-        [getattr(self, action)() for action in actions]
+    def add_actions(self, actions, **kwargs):
+        [getattr(self, action)(**kwargs) for action in actions]
 
     # Provided for those who prefer using the 'with' syntax in Python 2.5+
     def __enter__(self):
